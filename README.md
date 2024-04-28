@@ -1,4 +1,7 @@
-## Sample Python Repository
+## Photo Date Tagger
+
+This repository is designed to extract imprinted dates from film photos and give the option to prepend the extracted
+date onto the photo's filename.
 
 ### Setup instructions
 
