@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "sample-python"
+name = "photo-date-tagger"
 version = "0.0.1"
-description = "Sample Python repository."
+description = "Tool to rename film photos based on their date."
 authors = ["First Last <name@example.com>"]
-packages = [{include = "sample-python", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest-testdox = "^3.1.0"
+torch = "^2.3.0"
+torchvision = "^0.18.0"
+easyocr = "^1.7.1"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^2.2.1"
@@ -15,24 +16,11 @@ isort = "^5.13.2"
 black = "^24.2.0"
 mypy = "^1.8.0"
 pylint = "^3.0.3"
-pytest = "^8.0.0"
-coverage = "^7.4.1"
 pre-commit = "^3.6.1"
 
 [tool.poetry.scripts]
-sample-python = "sample-python.example:main"
-
-[tool.pytest.ini_options]
-pythonpath = [
-  "src"
-]
-testpaths = [
-  "tests"
-]
-addopts = [
-  "--basetemp=/tmp/pytest",
-  "--testdox"
-]
+check-photo-dates = "photo_date_tagger.photo_date_tag:check_photo_dates"
+rename-photos = "photo_date_tagger.photo_date_tag:rename_photos"
 
 [tool.black]
 line-length = 120
@@ -69,10 +57,6 @@ exclude = [
   '\.venv'
 ]
 ignore_missing_imports = true
-
-[tool.coverage.run]
-source = ["src", "tests"]
-omit = []
 
 [build-system]
 requires = ["poetry-core"]
