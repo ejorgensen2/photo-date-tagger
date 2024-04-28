@@ -15,9 +15,9 @@ date onto the photo's filename.
 ### Usage
 
 #### Extract photo date (w/o changing filename)
-`poetry run check-photo-dates` Extracts photo date strings from all images in the default `test_photos/` directory.
-`poetry run check-photo-dates --directory <path>` Extracts photo date strings from all images in the `filepath` directory.
-`poetry run check-photo-dates --file <filepath>` Extracts photo date string from the image at `filepath`.
+- `poetry run check-photo-dates` Extracts photo date strings from all images in the default `test_photos/` directory.
+- `poetry run check-photo-dates --directory <path>` Extracts photo date strings from all images in the `filepath` directory.
+- `poetry run check-photo-dates --file <filepath>` Extracts photo date string from the image at `filepath`.
 
 #### Extract photo date and Rename
-`poetry run rename-photos` Not Yet Implemented.
+- `poetry run rename-photos` Not Yet Implemented.
