@@ -168,4 +168,4 @@ cython_debug/
 # Windows desktop files
 desktop.ini
 
-./test_photos/test4.jpg
+*/test4.jpg
